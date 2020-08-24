@@ -26,7 +26,7 @@ namespace PasswordGenerator
                 for (int i = 0; i < PasswordLength; i++)
                 {
                     int firstBranch = random.Next(1, 4);
-                    if (i != atSign) 
+                    if (i != atSign)
                     {
                         switch (firstBranch)
                         {
@@ -41,7 +41,7 @@ namespace PasswordGenerator
                                 break;
                         }
                     }
-                       
+
                 }
 
                 for (int i = 0; i < PasswordLength; i++)
