@@ -18,22 +18,30 @@ namespace PasswordGenerator
                 Random random = new Random();
 
                 //Password Generator
+
+                //insert At sign random in to the password
+                //We definitely have an @ in the password
+                int atSign = random.Next(0, PasswordLength);
+                Password[atSign] = '@';
                 for (int i = 0; i < PasswordLength; i++)
                 {
                     int firstBranch = random.Next(1, 4);
-
-                    switch (firstBranch)
+                    if (i != atSign) 
                     {
-                        case 1:
-                            Password[i] = (char)random.Next(48, 58);
-                            break;
-                        case 2:
-                            Password[i] = (char)random.Next(63, 91);
-                            break;
-                        case 3:
-                            Password[i] = (char)random.Next(97, 123);
-                            break;
+                        switch (firstBranch)
+                        {
+                            case 1:
+                                Password[i] = (char)random.Next(48, 58);
+                                break;
+                            case 2:
+                                Password[i] = (char)random.Next(65, 91);
+                                break;
+                            case 3:
+                                Password[i] = (char)random.Next(97, 123);
+                                break;
+                        }
                     }
+                       
                 }
 
                 for (int i = 0; i < PasswordLength; i++)
