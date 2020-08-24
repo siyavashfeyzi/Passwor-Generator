@@ -44,13 +44,10 @@ namespace PasswordGenerator
 
                 }
 
-                for (int i = 0; i < PasswordLength; i++)
-                {
-                    Console.Write(Password[i]);
-                }
-
-                Console.WriteLine();
-
+                // Write Password. 
+                var password = new string(Password);
+                Console.WriteLine(password);
+                
                 Console.WriteLine("Do you want to continue?\n1.Yes\n2.No");
                 Continue = int.Parse(Console.ReadLine());
 
