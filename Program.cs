@@ -25,7 +25,7 @@ namespace PasswordGenerator
                 Password[atSign] = '@';
                 for (int i = 0; i < PasswordLength; i++)
                 {
-                    int firstBranch = random.Next(1, 4);
+                    int firstBranch = random.Next(1, 5);
                     if (i != atSign)
                     {
                         switch (firstBranch)
@@ -38,6 +38,9 @@ namespace PasswordGenerator
                                 break;
                             case 3:
                                 Password[i] = (char)random.Next(97, 123);
+                                break;
+                            case 4:
+                                Password[i] = (char)random.Next(32, 48);
                                 break;
                         }
                     }
