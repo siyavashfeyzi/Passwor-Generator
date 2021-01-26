@@ -7,7 +7,7 @@ namespace PasswordGenerator
         private static void Main(string[] args)
         {
             Console.WriteLine("Welcom to the Password Generator");
-            int Continue = 0;
+            int Continue;
             do
             {
                 Console.WriteLine("How long is the password?");
@@ -40,7 +40,7 @@ namespace PasswordGenerator
                                 Password[i] = (char)random.Next(97, 123);
                                 break;
                             case 4:
-                                Password[i] = (char)random.Next(32, 48);
+                                Password[i] = (char)random.Next(33, 48);
                                 break;
                         }
                     }
@@ -48,7 +48,7 @@ namespace PasswordGenerator
                 }
 
                 // Write Password. 
-                var password = new string(Password);
+                string password = new string(Password);
                 Console.WriteLine(password);
                 
                 Console.WriteLine("Do you want to continue?\n1.Yes\n2.No");
